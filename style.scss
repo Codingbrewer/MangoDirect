@@ -1,0 +1,69 @@
+@import 'config';
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body {
+    background-color: $secondary-color;
+    font-family: $font-stack;
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.showcase {
+    @include set-background($primary-color);
+    height: 500px;
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        ul {
+            display: flex;
+            list-style: none;
+
+        }
+
+        li {
+            padding: 15px;
+        }
+
+
+        a:hover {
+            color: $secondary-color;
+        }
+    }
+
+    &-content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .desktop-img {
+         width: 45%;
+         padding-top: 5%;  
+        }
+
+        .mobile-img {
+            display: none;  
+           }
+
+        h1 {
+            font-size: 50px;
+            line-height: 1.2;
+        }
+
+    }
+}
+
+@import 'mobile';
+@import 'utilities';
+@import 'buttons';

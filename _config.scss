@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+$font-stack: 'Comfortaa';
+$primary-color: rgb(244, 255, 183);
+$secondary-color: rgb(185, 240, 180);
+
+
+//set text color based on bg 
+
+@function set-text-color($color) {
+    @if (lightness($color) > 70) {
+        @return #333;
+    }
+
+   @else{
+    @return white;
+
+   } 
+}
+
+// set bg and text color 
+
+@mixin  set-background($color) {
+    background-color: $color;
+    color: set-text-color($color)
+    
+}
+

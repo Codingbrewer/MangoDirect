@@ -1,0 +1,28 @@
+@media (max-width: 700px) {
+    .showcase {
+        height: 300px;
+
+        &-content {
+            text-align: center;
+            display: block;
+
+            .desktop-img {
+                display: none; 
+                 
+               }
+       
+               .mobile-img {
+                display: block;
+                width: 30%; 
+                margin-right: 33%;
+                margin-left: 33%;
+                transform: rotate(90deg);
+                  }
+
+                  h1 {
+                    padding-top: 10%;
+                    font-size: 2.3rem;
+                  }
+        }
+    }
+}
